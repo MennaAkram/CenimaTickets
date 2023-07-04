@@ -12,3 +12,5 @@ val Pink40 = Color(0xFF7D5260)
 
 val LightGrayTransparent = Color(0x4DCCCCCC)
 val Primary = Color(0xFFFF5524)
+val Border = Color(0xFFE5E5E5)
+val OnBackground_87 = Color(0xDE000000)
