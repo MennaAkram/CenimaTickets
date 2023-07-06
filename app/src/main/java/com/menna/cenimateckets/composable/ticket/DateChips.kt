@@ -1,6 +1,8 @@
 package com.menna.cenimateckets.composable.ticket
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -23,7 +25,7 @@ import com.menna.cenimateckets.ui.theme.Gray
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DateChips(
+fun DateChip(
     title:String ,
     subTitle: String,
     selectedColor: Color,
@@ -61,14 +63,39 @@ fun DateChips(
     )
 }
 
+@Composable
+fun DateChips() {
+    Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
+            unSelectedTitleColor = Color.Black,
+            unSlecectedSubTitleColor = Color.DarkGray,
+            selectedSubTitleColor = Color.LightGray)
+        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
+            unSelectedTitleColor = Color.Black,
+            unSlecectedSubTitleColor = Color.DarkGray,
+            selectedSubTitleColor = Color.LightGray)
+        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
+            unSelectedTitleColor = Color.Black,
+            unSlecectedSubTitleColor = Color.DarkGray,
+            selectedSubTitleColor = Color.LightGray)
+        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
+            unSelectedTitleColor = Color.Black,
+            unSlecectedSubTitleColor = Color.DarkGray,
+            selectedSubTitleColor = Color.LightGray)
+        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
+            unSelectedTitleColor = Color.Black,
+            unSlecectedSubTitleColor = Color.DarkGray,
+            selectedSubTitleColor = Color.LightGray)
+        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
+            unSelectedTitleColor = Color.Black,
+            unSlecectedSubTitleColor = Color.DarkGray,
+            selectedSubTitleColor = Color.LightGray)
+    }
+
+}
+
 @Preview
 @Composable
 fun DateChipPreview() {
-    DateChips(
-        title = "14",
-        subTitle =  "Thu",
-        selectedColor = Gray,
-        unSelectedTitleColor = Color.Black,
-    unSlecectedSubTitleColor = Color.DarkGray,
-    selectedSubTitleColor = Color.LightGray)
+    DateChips()
 }
