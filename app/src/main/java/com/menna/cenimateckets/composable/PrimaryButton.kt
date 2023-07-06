@@ -1,8 +1,6 @@
 package com.menna.cenimateckets.composable
 
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -27,7 +25,7 @@ fun PrimaryButton(text : String, painter: Painter, modifier: Modifier = Modifier
         modifier = modifier.height(48.dp)
     ){
         Icon(painter = painter, contentDescription = "")
-        Spacer(modifier = Modifier.width(8.dp))
+        SpacerHorizontal8()
         Text(
             text = text,
             fontFamily = KumbhSans,
