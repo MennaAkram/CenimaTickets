@@ -2,12 +2,14 @@ package com.menna.cenimateckets.composable.ticket
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -41,14 +43,24 @@ fun BottomSheet(
         )
     ) {
         Column(
-            modifier = Modifier.padding(vertical = 8.dp),
+            modifier = Modifier.padding(vertical = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
-                DateChips()
-            Spacer(modifier = Modifier.height(16.dp))
-            TimeChips()
-            Row(horizontalArrangement = Arrangement.SpaceBetween) {
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                contentPadding = PaddingValues(horizontal = 24.dp, vertical = 8.dp)
+            ){
+                item { DateChips() }
+            }
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                contentPadding = PaddingValues(horizontal = 24.dp, vertical = 16.dp)
+            ){
+               item { TimeChips() }
+            }
+
+            Row(horizontalArrangement = Arrangement.spacedBy(80.dp)) {
                 Column(){
                     Text(
                         text = "$100.00",
@@ -61,7 +73,6 @@ fun BottomSheet(
                         fontSize = 12.sp
                     )
                 }
-                Spacer(modifier = Modifier.width(80.dp))
                 PrimaryButton(text = "Buy tickets", painter = painterResource(id = R.drawable.card))
             }
 
