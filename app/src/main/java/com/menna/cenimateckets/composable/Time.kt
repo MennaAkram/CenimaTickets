@@ -3,10 +3,8 @@ package com.menna.cenimateckets.composable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -15,7 +13,6 @@ import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -27,8 +24,11 @@ import com.menna.cenimateckets.ui.theme.LightGrayTransparent
 import com.menna.cenimateckets.ui.theme.OnBackground_38
 
 @Composable
-fun Time(backgroundColor: Color, textColor: Color) {
-    Row (modifier = Modifier.clip(RoundedCornerShape(32.dp)).background(backgroundColor)
+fun Time(
+    modifier: Modifier = Modifier,
+    backgroundColor: Color,
+    textColor: Color) {
+    Row (modifier = modifier.clip(RoundedCornerShape(32.dp)).background(backgroundColor)
         .padding(4.dp)
         ){
         Icon(

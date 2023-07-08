@@ -3,7 +3,6 @@ package com.menna.cenimateckets.composable.booking
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
@@ -19,65 +18,18 @@ import com.menna.cenimateckets.R
 @Composable
 fun ImageCard() {
     LazyRow(
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
         contentPadding = PaddingValues(horizontal = 16.dp)
     ){
-        item { Image(
+        items(6) {
+            Image(
             painter = painterResource(R.drawable.poppy_corby),
             contentDescription = "",
             modifier = Modifier
                 .size(60.dp)
                 .clip(CircleShape),
-            contentScale = ContentScale.FillWidth
+            contentScale = ContentScale.Crop
         )
-            Image(
-                painter = painterResource(R.drawable.poppy_corby),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillWidth
-            )
-            Image(
-                painter = painterResource(R.drawable.poppy_corby),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillWidth
-            )
-            Image(
-                painter = painterResource(R.drawable.poppy_corby),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillWidth
-            )
-            Image(
-                painter = painterResource(R.drawable.poppy_corby),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillWidth
-            )
-            Image(
-                painter = painterResource(R.drawable.poppy_corby),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillWidth
-            )
-            Image(
-                painter = painterResource(R.drawable.poppy_corby),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillWidth
-            )
         }
     }
 

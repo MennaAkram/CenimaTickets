@@ -15,7 +15,7 @@ import com.menna.cenimateckets.ui.theme.LightGrayTransparent
 
 @Preview
 @Composable
-fun exitButton(){
+fun ExitButton(){
     IconButton(
         onClick = {  },
     modifier = Modifier

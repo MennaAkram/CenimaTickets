@@ -15,7 +15,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.menna.cenimateckets.ui.theme.Border
 import com.menna.cenimateckets.ui.theme.Gray
-import com.menna.cenimateckets.ui.theme.Primary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
