@@ -11,15 +11,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.menna.cenimateckets.ui.theme.Border
-import com.menna.cenimateckets.ui.theme.Gray
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PrimaryChip(
     text:String ,
+    isSelected: Boolean = false,
     selectedColor: Color,
     unSelectedTextColor: Color,
 ) {
@@ -39,10 +38,4 @@ fun PrimaryChip(
         shape = RoundedCornerShape(24.dp),
         elevation = SuggestionChipDefaults.suggestionChipElevation(0.dp)
     )
-}
-
-@Preview
-@Composable
-fun PrimaryChipPreview() {
-    PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
 }

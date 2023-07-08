@@ -9,36 +9,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.ui.theme.LightGrayTransparent
 
-@Preview
 @Composable
-fun ExitButton(){
+fun ExitButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+){
     IconButton(
-        onClick = {  },
-    modifier = Modifier
+        onClick = onClick,
     ) {
         Icon(
             painter = painterResource(R.drawable.close_circle),
             contentDescription = "",
-            modifier = Modifier.clip(CircleShape).background(color = LightGrayTransparent),
+            modifier = modifier.clip(CircleShape).background(color = LightGrayTransparent),
             tint = Color.White
         )
     }
 }
-
-//Column(modifier = Modifier.fillMaxSize(),
-//horizontalAlignment = Alignment.CenterHorizontally,
-//verticalArrangement = Arrangement.Center) {
-//    IconButton(
-//        onClick = { /* ... */ },
-//        modifier = Modifier.size(50.dp)
-//    ) {
-//        Icon(imageVector = Icons.Filled.Add,
-//            contentDescription = null,
-//            modifier = Modifier.size(50.dp),
-//            tint = Color.Red)
-//    }
-//}

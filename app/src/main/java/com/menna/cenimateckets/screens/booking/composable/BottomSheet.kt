@@ -18,13 +18,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.menna.cenimateckets.composable.spacing.padding_horizontal.SpacerHorizontal8
+import androidx.navigation.NavController
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.Genre
 import com.menna.cenimateckets.composable.PrimaryButton
+import com.menna.cenimateckets.composable.spacing.padding_horizontal.SpacerHorizontal8
+import com.menna.cenimateckets.screens.util.Screens
 
 @Composable
 fun BottomSheet(
+    navController: NavController,
     modifier: Modifier = Modifier
 ) {
     Surface(modifier = modifier
@@ -67,7 +70,11 @@ fun BottomSheet(
                 fontSize = 14.sp,
             )
             Spacer(modifier = Modifier.height(16.dp))
-            PrimaryButton(text = "Booking", painter = painterResource(id = R.drawable.ticket))
+            PrimaryButton(
+                text = "Booking",
+                painter = painterResource(id = R.drawable.ticket),
+                onClick = { navController.navigate(Screens.Ticket.route)}
+            )
         }
     }
 }

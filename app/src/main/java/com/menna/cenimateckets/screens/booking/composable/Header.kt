@@ -14,15 +14,16 @@ import com.menna.cenimateckets.composable.Time
 import com.menna.cenimateckets.ui.theme.LightGrayTransparent
 
 @Composable
-fun Header() {
+fun Header(onClick: () -> Unit,
+           modifier: Modifier = Modifier) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 24.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        ExitButton()
+        ExitButton(onClick)
         Time(backgroundColor = LightGrayTransparent, textColor = Color.White)
     }
 }

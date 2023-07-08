@@ -2,13 +2,11 @@ package com.menna.cenimateckets.screens.ticket.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -20,9 +18,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.menna.cenimateckets.composable.spacing.padding_vertical.SpacerVertical12
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.PrimaryButton
+import com.menna.cenimateckets.composable.spacing.padding_vertical.SpacerVertical12
 import com.menna.cenimateckets.ui.theme.Gray
 import com.menna.cenimateckets.ui.theme.OnBackground_87
 
@@ -39,18 +37,8 @@ fun BottomSheet(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
-            LazyRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                contentPadding = PaddingValues(vertical = 8.dp)
-            ){
-                item { DateChips() }
-            }
-            LazyRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                contentPadding = PaddingValues(vertical = 8.dp)
-            ){
-               item { TimeChips() }
-            }
+            DateChips()
+            TimeChips()
             SpacerVertical12()
             Row(
                 modifier = modifier.fillMaxWidth(),
@@ -67,7 +55,9 @@ fun BottomSheet(
                         fontSize = 12.sp
                     )
                 }
-                PrimaryButton(text = "Buy tickets", painter = painterResource(id = R.drawable.card))
+                PrimaryButton(text = "Buy tickets", painter = painterResource(id = R.drawable.card),
+                    onClick = {}
+                )
             }
 
         }

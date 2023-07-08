@@ -2,10 +2,11 @@ package com.menna.cenimateckets.screens.ticket.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SuggestionChip
@@ -18,7 +19,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.menna.cenimateckets.ui.theme.Border
 import com.menna.cenimateckets.ui.theme.Gray
@@ -65,37 +65,18 @@ fun DateChip(
 
 @Composable
 fun DateChips() {
-    Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
-            unSelectedTitleColor = Color.Black,
-            unSlecectedSubTitleColor = Color.DarkGray,
-            selectedSubTitleColor = Color.LightGray)
-        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
-            unSelectedTitleColor = Color.Black,
-            unSlecectedSubTitleColor = Color.DarkGray,
-            selectedSubTitleColor = Color.LightGray)
-        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
-            unSelectedTitleColor = Color.Black,
-            unSlecectedSubTitleColor = Color.DarkGray,
-            selectedSubTitleColor = Color.LightGray)
-        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
-            unSelectedTitleColor = Color.Black,
-            unSlecectedSubTitleColor = Color.DarkGray,
-            selectedSubTitleColor = Color.LightGray)
-        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
-            unSelectedTitleColor = Color.Black,
-            unSlecectedSubTitleColor = Color.DarkGray,
-            selectedSubTitleColor = Color.LightGray)
-        DateChip(title = "14", subTitle =  "Thu", selectedColor = Gray,
-            unSelectedTitleColor = Color.Black,
-            unSlecectedSubTitleColor = Color.DarkGray,
-            selectedSubTitleColor = Color.LightGray)
+    LazyRow(
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(vertical = 8.dp)
+    ) {
+        items(6) {
+            DateChip(
+                title = "14", subTitle = "Thu", selectedColor = Gray,
+                unSelectedTitleColor = Color.Black,
+                unSlecectedSubTitleColor = Color.DarkGray,
+                selectedSubTitleColor = Color.LightGray
+            )
+        }
+
     }
-
-}
-
-@Preview
-@Composable
-fun DateChipPreview() {
-    DateChips()
 }

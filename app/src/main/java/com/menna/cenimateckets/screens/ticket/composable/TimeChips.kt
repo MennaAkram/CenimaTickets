@@ -1,32 +1,26 @@
 package com.menna.cenimateckets.screens.ticket.composable
 
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.menna.cenimateckets.composable.PrimaryChip
-import com.menna.cenimateckets.composable.spacing.padding_horizontal.SpacerHorizontal8
 import com.menna.cenimateckets.ui.theme.Gray
 
 @Composable
 fun TimeChips() {
-    Row {
-        PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
-        SpacerHorizontal8()
-        PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
-        SpacerHorizontal8()
-        PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
-        SpacerHorizontal8()
-        PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
-        SpacerHorizontal8()
-        PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
-        SpacerHorizontal8()
-        PrimaryChip(text = "10:00" , selectedColor = Gray, unSelectedTextColor = Color.Black)
-    }
+    LazyRow(
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(vertical = 8.dp)
+    ) {
+        items(6){
+           PrimaryChip(
+              text = "10:00" ,
+              selectedColor = Gray,
+              unSelectedTextColor = Color.Black
+           )
+        }
 }
-
-@Preview
-@Composable
-fun TimeChipPreview() {
-   TimeChips()
 }
