@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
@@ -19,7 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.triviagame.ui.composable.spacing.padding_vertical.SpacerVertical16
+import com.example.triviagame.ui.composable.spacing.padding_vertical.SpacerVertical12
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.PrimaryButton
 import com.menna.cenimateckets.ui.theme.Gray
@@ -29,30 +30,31 @@ import com.menna.cenimateckets.ui.theme.OnBackground_87
 fun BottomSheet(
     modifier: Modifier = Modifier
 ) {
-    Surface(modifier = modifier
-        .clip(
+    Surface(modifier = modifier.clip(
             RoundedCornerShape(topStartPercent = 10, topEndPercent = 10)
         )
     ) {
         Column(
-            modifier = Modifier.padding(vertical = 16.dp),
+            modifier = Modifier.padding(vertical = 16.dp, horizontal = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
             LazyRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
-                contentPadding = PaddingValues(horizontal = 24.dp, vertical = 8.dp)
+                contentPadding = PaddingValues(vertical = 8.dp)
             ){
                 item { DateChips() }
             }
             LazyRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
-                contentPadding = PaddingValues(horizontal = 24.dp, vertical = 8.dp)
+                contentPadding = PaddingValues(vertical = 8.dp)
             ){
                item { TimeChips() }
             }
-            SpacerVertical16()
-            Row(horizontalArrangement = Arrangement.spacedBy(80.dp)) {
+            SpacerVertical12()
+            Row(
+                modifier = modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
                 Column(){
                     Text(
                         text = "$100.00",

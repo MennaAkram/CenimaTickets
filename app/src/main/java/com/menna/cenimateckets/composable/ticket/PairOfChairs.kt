@@ -11,25 +11,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.menna.cenimateckets.R
-import com.menna.cenimateckets.composable.SpacerHorizontal8
-import com.menna.cenimateckets.screens.ChairStates
 
 @Composable
 fun PairOfChairs(modifier: Modifier = Modifier) {
-    Box() {
-        Row() {
-            ChairItem(state = ChairStates.Taken)
-            SpacerHorizontal8()
+    Box(modifier = modifier.padding(1.dp)) {
+        Row(modifier = Modifier.padding(start = 3.dp)) {
+            ChairItem()
             ChairItem()
         }
         Icon(
-            modifier = modifier.padding( end =2.dp, bottom = 1.dp, top = 2.dp),
+            modifier = Modifier.padding(top = 10.dp),
             painter = painterResource( R.drawable.arch ),
             contentDescription = "",
             tint = Color.DarkGray
         )
     }
-
 }
 
 @Preview

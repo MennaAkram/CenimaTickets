@@ -1,5 +1,6 @@
 package com.menna.cenimateckets.composable.ticket
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -30,6 +31,7 @@ fun ChairItem(
     }
     IconButton(onClick = { isSelected = !isSelected }) {
         Icon(
+            modifier = Modifier.fillMaxSize(),
             painter = painterResource( R.drawable.seat ),
             contentDescription = "",
             tint = if(isSelected) Primary  else Color.White
