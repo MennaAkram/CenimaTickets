@@ -1,4 +1,4 @@
-package com.example.triviagame.ui.composable.spacing.padding_horizontal
+package com.menna.cenimateckets.composable.spacing.padding_horizontal
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
