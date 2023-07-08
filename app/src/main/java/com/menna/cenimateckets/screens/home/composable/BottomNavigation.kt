@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.home
+package com.menna.cenimateckets.screens.home.composable
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.PaddingValues

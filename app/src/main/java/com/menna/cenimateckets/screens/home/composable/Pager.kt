@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.home
+package com.menna.cenimateckets.screens.home.composable
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image

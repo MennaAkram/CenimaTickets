@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.screens
+package com.menna.cenimateckets.screens.ticket
 
 enum class ChairStates {
     Available,

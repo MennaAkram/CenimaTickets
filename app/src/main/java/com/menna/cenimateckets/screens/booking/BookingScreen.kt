@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.screens
+package com.menna.cenimateckets.screens.booking
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,8 +12,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.CircleIconButton
-import com.menna.cenimateckets.composable.booking.BottomSheet
-import com.menna.cenimateckets.composable.booking.Header
+import com.menna.cenimateckets.screens.booking.composable.BottomSheet
+import com.menna.cenimateckets.screens.booking.composable.Header
 
 @Composable
 fun BookingScreen() {

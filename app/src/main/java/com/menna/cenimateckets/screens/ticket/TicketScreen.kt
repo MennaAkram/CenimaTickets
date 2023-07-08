@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.screens
+package com.menna.cenimateckets.screens.ticket
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -19,9 +19,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.ExitButton
-import com.menna.cenimateckets.composable.ticket.BottomSheet
-import com.menna.cenimateckets.composable.ticket.Chairs
-import com.menna.cenimateckets.composable.ticket.TicketState
+import com.menna.cenimateckets.screens.ticket.composable.BottomSheet
+import com.menna.cenimateckets.screens.ticket.composable.Chairs
+import com.menna.cenimateckets.screens.ticket.composable.TicketState
 import com.menna.cenimateckets.ui.theme.Primary
 
 @Composable

@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.home
+package com.menna.cenimateckets.screens.home.composable
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable

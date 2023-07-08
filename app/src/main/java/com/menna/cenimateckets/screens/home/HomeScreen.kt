@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.screens
+package com.menna.cenimateckets.screens.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,12 +15,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.menna.cenimateckets.composable.Genre
-import com.menna.cenimateckets.composable.SpacerHorizontal8
 import com.menna.cenimateckets.composable.Time
-import com.menna.cenimateckets.composable.home.BottomNavigation
-import com.menna.cenimateckets.composable.home.CategoryChips
-import com.menna.cenimateckets.composable.home.HomeBackground
-import com.menna.cenimateckets.composable.home.Pager
+import com.menna.cenimateckets.screens.home.composable.BottomNavigation
+import com.menna.cenimateckets.screens.home.composable.CategoryChips
+import com.menna.cenimateckets.screens.home.composable.HomeBackground
+import com.menna.cenimateckets.screens.home.composable.Pager
 import com.menna.cenimateckets.ui.theme.OnBackground_87
 
 @Composable
@@ -44,9 +43,10 @@ Column (
             fontSize = 24.sp,
             modifier = Modifier.padding(top = 16.dp)
         )
-        Row(modifier = Modifier.padding(top = 16.dp)) {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier.padding(top = 16.dp)) {
             Genre(text = "Fantasy")
-            SpacerHorizontal8()
             Genre(text = "Adventure")
         }
         BottomNavigation(isSelected = true)

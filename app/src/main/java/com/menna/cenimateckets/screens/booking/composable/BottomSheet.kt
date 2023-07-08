@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.booking
+package com.menna.cenimateckets.screens.booking.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,10 +18,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.menna.cenimateckets.composable.spacing.padding_horizontal.SpacerHorizontal8
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.Genre
 import com.menna.cenimateckets.composable.PrimaryButton
-import com.menna.cenimateckets.composable.SpacerHorizontal8
 
 @Composable
 fun BottomSheet(

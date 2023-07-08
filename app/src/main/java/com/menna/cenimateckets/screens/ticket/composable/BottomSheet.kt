@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.ticket
+package com.menna.cenimateckets.screens.ticket.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,7 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.triviagame.ui.composable.spacing.padding_vertical.SpacerVertical12
+import com.menna.cenimateckets.composable.spacing.padding_vertical.SpacerVertical12
 import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.PrimaryButton
 import com.menna.cenimateckets.ui.theme.Gray

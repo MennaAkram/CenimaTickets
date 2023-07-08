@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.ticket
+package com.menna.cenimateckets.screens.ticket.composable
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Icon
@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.menna.cenimateckets.R
-import com.menna.cenimateckets.screens.ChairStates
+import com.menna.cenimateckets.screens.ticket.ChairStates
 import com.menna.cenimateckets.ui.theme.Primary
 
 @Composable

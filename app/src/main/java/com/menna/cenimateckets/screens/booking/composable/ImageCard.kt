@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.booking
+package com.menna.cenimateckets.screens.booking.composable
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

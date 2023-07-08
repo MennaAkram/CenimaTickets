@@ -1,4 +1,4 @@
-package com.menna.cenimateckets.composable.booking
+package com.menna.cenimateckets.screens.booking.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -9,8 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.menna.cenimateckets.composable.Time
 import com.menna.cenimateckets.composable.ExitButton
+import com.menna.cenimateckets.composable.Time
 import com.menna.cenimateckets.ui.theme.LightGrayTransparent
 
 @Composable
