@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -20,14 +19,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.lerp
-import com.menna.cenimateckets.R
 import com.menna.cenimateckets.screens.home.HomeUiState
 import kotlin.math.absoluteValue
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun Pager(
-    pagerState: PagerState,
     state: HomeUiState,
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
@@ -67,7 +64,8 @@ fun Pager(
         )
         {
             Image(
-                painter = painterResource(R.drawable.slider2),
+//                painter = painterResource(R.drawable.slider2),
+                painter = painterResource(state.images[page]),
                 contentDescription = "",
                 modifier = Modifier
                     .fillMaxWidth(),
