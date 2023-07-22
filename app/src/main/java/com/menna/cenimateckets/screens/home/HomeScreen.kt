@@ -93,7 +93,6 @@ Column (
         )
         Pager(
             modifier = modifier.padding(top = 16.dp),
-            pagerState = pagerState,
             state = state,
             onClick = listener::onClickPager
         )

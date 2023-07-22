@@ -16,7 +16,10 @@ import com.menna.cenimateckets.screens.booking.composable.BottomSheet
 import com.menna.cenimateckets.screens.booking.composable.Header
 
 @Composable
-fun BookingScreen(navController: NavController, modifier: Modifier = Modifier) {
+fun BookingScreen(
+    navController: NavController,
+    modifier: Modifier = Modifier,
+) {
     Column(
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally,

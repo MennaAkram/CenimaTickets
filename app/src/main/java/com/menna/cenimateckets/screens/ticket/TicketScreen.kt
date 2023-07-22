@@ -36,14 +36,14 @@ fun TicketScreen(navController: NavController, modifier: Modifier = Modifier) {
         Row(modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp)
-            .padding(top = 16.dp),
+            .padding(vertical = 16.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Start
         ) {
             ExitButton(onClick = { navController.navigateUp() })
         }
         Image(modifier = modifier
-            .fillMaxWidth()
+            .fillMaxWidth().padding(bottom = 24.dp)
             .aspectRatio(4.5f),
             painter = painterResource(R.drawable.subtract),
             contentDescription = "")

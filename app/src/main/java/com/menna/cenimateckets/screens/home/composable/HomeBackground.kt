@@ -4,6 +4,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.runtime.Composable
@@ -12,7 +13,6 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.menna.cenimateckets.R
 import com.menna.cenimateckets.screens.home.HomeUiState
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -23,9 +23,10 @@ fun HomeBackground(
 ) {
     Box() {
         Image(
-            painter = painterResource(R.drawable.slider2),
-//            painter = painterResource(rememberAsyncImagePainter(model = state.images[pagerState.currentPage])),
+//            painter = painterResource(R.drawable.slider2),
+            painter = painterResource(state.images[pagerState.currentPage]),
             modifier = Modifier
+                .fillMaxWidth()
                 .fillMaxHeight(fraction = 0.5f)
                 .blur(32.dp,)
                 .offset(y = (-32).dp),

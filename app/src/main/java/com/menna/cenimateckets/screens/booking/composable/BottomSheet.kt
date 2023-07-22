@@ -23,12 +23,14 @@ import com.menna.cenimateckets.R
 import com.menna.cenimateckets.composable.Genre
 import com.menna.cenimateckets.composable.PrimaryButton
 import com.menna.cenimateckets.composable.spacing.padding_horizontal.SpacerHorizontal8
+import com.menna.cenimateckets.screens.booking.BookingUiState
 import com.menna.cenimateckets.screens.util.Screens
 
 @Composable
 fun BottomSheet(
     navController: NavController,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    state: BookingUiState = BookingUiState()
 ) {
     Surface(modifier = modifier
         .clip(
@@ -60,7 +62,7 @@ fun BottomSheet(
                 Genre(text = "Adventure")
             }
             Spacer(modifier = Modifier.height(16.dp))
-            ImageCard()
+            ImageCard(state)
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "Professor Albus Dumbledore knows the powerful, " +

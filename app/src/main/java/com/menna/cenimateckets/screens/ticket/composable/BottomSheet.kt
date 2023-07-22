@@ -26,14 +26,14 @@ import com.menna.cenimateckets.ui.theme.OnBackground_87
 
 @Composable
 fun BottomSheet(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Surface(modifier = modifier.clip(
             RoundedCornerShape(topStartPercent = 10, topEndPercent = 10)
         )
     ) {
         Column(
-            modifier = Modifier.padding(vertical = 16.dp, horizontal = 24.dp),
+            modifier = Modifier.padding(vertical = 24.dp, horizontal = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
